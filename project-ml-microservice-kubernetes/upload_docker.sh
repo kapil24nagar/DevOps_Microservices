@@ -5,11 +5,15 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=kapil24nagar/mlpred
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 
+docker login -u kapil24nagar
+docker tag mlpred $dockerpath:latest
+
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath:latest

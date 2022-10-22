@@ -4,9 +4,10 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-
+docker build --tag=mlpred .
 # Step 2: 
 # List docker images
-
+docker image ls
 # Step 3: 
-# Run flask app
+# Run mlpred app
+docker run -p 8080:80 mlpred
